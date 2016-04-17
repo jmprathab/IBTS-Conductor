@@ -2,9 +2,6 @@ package datasets;
 
 import com.google.gson.Gson;
 
-/**
- * Created by jmprathab on 31/03/16.
- */
 public class User {
     private int userId;
     private String name;
@@ -14,6 +11,12 @@ public class User {
     private String password;
 
     public User() {
+    }
+
+    public User(int userId, String mobile, String password) {
+        this.userId = userId;
+        this.mobile = mobile;
+        this.password = password;
     }
 
     private User(int userId, String name, String mobile, String email, String address, String password) {
@@ -52,44 +55,8 @@ public class User {
         this.name = name;
     }
 
-    public String getMobile() {
-        if (this.mobile == null || this.mobile.equals("-")) {
-            return "-";
-        }
-        return mobile;
-    }
-
     public void setMobile(String mobile) {
         this.mobile = mobile;
-    }
-
-    public String getEmail() {
-        if (this.email == null || this.email.equals("-")) {
-            return "-";
-        }
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        if (this.address == null || this.address.equals("-")) {
-            return "-";
-        }
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPassword() {
-        if (this.password == null || this.password.equals("-")) {
-            return "-";
-        }
-        return password;
     }
 
     public void setPassword(String password) {

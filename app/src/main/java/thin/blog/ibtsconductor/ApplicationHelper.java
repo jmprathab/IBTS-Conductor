@@ -36,10 +36,11 @@ public class ApplicationHelper extends Application {
         return android.util.Patterns.PHONE.matcher(mobile).matches();
     }
 
+
     public static void writeToSharedPreferences(String name, String value) {
         SharedPreferences sharedPreferences = getMyApplicationContext().getSharedPreferences(Constants.SHARED_PREFS_USER_DATA, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(Constants.USER_DATA_OBJECT, value);
+        editor.putString(name, value);
         editor.apply();
     }
 
@@ -60,16 +61,18 @@ public class ApplicationHelper extends Application {
         return sharedPreferences.getString(name, defaultValue);
     }
 
+    /**
+     * Locks the view by making the view non-clickable
+     */
     public static void lockView(View v) {
         v.setClickable(false);
     }
 
+    /**
+     * Releases the view which was locked using lockView() method
+     */
     public static void releaseView(View v) {
         v.setClickable(true);
-    }
-
-    public static void L(String message) {
-        Log.d("prathab", message);
     }
 
     /**

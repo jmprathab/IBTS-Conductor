@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="thin.blog.ibtsconductor.Scan">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:context="thin.blog.ibtsconductor.Home">
+
+
+        <TextView
+            android:id="@+id/bus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus List" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_bus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:prompt="@string/spinner_bus_instruction"
+            android:spinnerMode="dialog">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <TextView
+            android:id="@+id/stop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop List" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:prompt="@string/spinner_stop_instruction"
+            android:spinnerMode="dialog">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="8dp"
+                android:text="Passengers "
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/number_of_passengers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

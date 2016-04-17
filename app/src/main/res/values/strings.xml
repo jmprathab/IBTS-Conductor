@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">IBTS Conductor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spinner_bus_instruction">Select Bus</string>
+    <string name="spinner_stop_instruction">Select Stop</string>
 </resources>

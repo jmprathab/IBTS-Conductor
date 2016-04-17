@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Account">
+            <menu>
+                <item
+                    android:id="@+id/menu_scan"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_search"
+                    android:title="Scan" />
+                <item
+                    android:id="@+id/menu_settings"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_settings"
+                    android:title="Settings" />
+                <item
+                    android:id="@+id/menu_logout"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_logout"
+                    android:title="Logout" />
+            </menu>
+        </item>
+
+        <item android:title="Details">
+            <menu>
+                <item
+                    android:id="@+id/menu_trip_details"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_trip_details"
+                    android:title="Trip Details" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="User Support">
+            <menu>
+                <item
+                    android:id="@+id/help"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_help"
+                    android:title="Help" />
+                <item
+                    android:id="@+id/about"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_details"
+                    android:title="About" />
+            </menu>
+        </item>
+    </group>
+</menu>

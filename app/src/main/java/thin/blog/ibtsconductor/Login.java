@@ -37,6 +37,9 @@ import static thin.blog.ibtsconductor.ApplicationHelper.lockView;
 import static thin.blog.ibtsconductor.ApplicationHelper.releaseView;
 import static thin.blog.ibtsconductor.ApplicationHelper.writeToSharedPreferences;
 
+/**
+ * Login Activity which allows users to login into the application
+ */
 public class Login extends AppCompatActivity {
     @Bind(R.id.mobile)
     EditText mobile;
@@ -57,7 +60,6 @@ public class Login extends AppCompatActivity {
         userInputMobile = mobile.getText().toString();
         userInputPassword = password.getText().toString();
         if (isValidMobileNumber(userInputMobile) && isValidPassword(userInputPassword)) {
-            //if (true) {
             user.setMobile(userInputMobile);
             user.setPassword(userInputPassword);
             final RequestQueue requestQueue = VolleySingleton.getInstance().getRequestQueue();
@@ -68,7 +70,6 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onResponse(JSONObject response) {
                     jsonParser(response);
-
                 }
             }, new Response.ErrorListener() {
                 @Override

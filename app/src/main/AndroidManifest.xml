@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="thin.blog.ibtsconductor">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name=".ApplicationHelper"
         android:allowBackup="true"
@@ -19,7 +23,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Home">
+            android:name=".Home"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".QRReader"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
         </activity>
     </application>
 
