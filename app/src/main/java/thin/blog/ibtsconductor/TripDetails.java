@@ -12,7 +12,8 @@ import android.view.ViewGroup;
  * Fragment is used to Display Trip Details of the current Bus
  */
 public class TripDetails extends Fragment {
-    public TripDetails() {}
+    public TripDetails() {
+    }
 
     public static TripDetails newInstance() {
         return new TripDetails();

@@ -27,7 +27,7 @@ class Constants {
 
     static {
         if (localhost) {
-            ADDRESS = "http://192.168.1.2/conductor/";
+            ADDRESS = "http://192.168.1.5/conductor/";
         } else {
             ADDRESS = "http://www.ibts.conductor.com/";
         }

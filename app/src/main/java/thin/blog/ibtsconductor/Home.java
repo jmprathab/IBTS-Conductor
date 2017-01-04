@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -31,13 +31,13 @@ import static thin.blog.ibtsconductor.ApplicationHelper.writeToSharedPreferences
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static final String QR_CODE_DATA = "qr_code_data";
     public static final int QR_CODE_REQUEST_CODE = 1;
-    @Bind(R.id.app_bar)
+    @BindView(R.id.app_bar)
     Toolbar toolbar;
-    @Bind(R.id.floating_action_button)
+    @BindView(R.id.floating_action_button)
     FloatingActionButton floatingActionButton;
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
-    @Bind(R.id.navigation_view)
+    @BindView(R.id.navigation_view)
     NavigationView navigationView;
     private FragmentManager fragmentManager;
     private boolean backPressed = false;

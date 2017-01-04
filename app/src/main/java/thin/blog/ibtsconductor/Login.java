@@ -24,7 +24,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import datasets.User;
@@ -41,11 +41,11 @@ import static thin.blog.ibtsconductor.ApplicationHelper.writeToSharedPreferences
  * Login Activity which allows users to login into the application
  */
 public class Login extends AppCompatActivity {
-    @Bind(R.id.mobile)
+    @BindView(R.id.mobile)
     EditText mobile;
-    @Bind(R.id.password)
+    @BindView(R.id.password)
     EditText password;
-    @Bind(R.id.login)
+    @BindView(R.id.login)
     ActionProcessButton login;
     User user = new User();
     private String serverMessage;
@@ -157,7 +157,7 @@ public class Login extends AppCompatActivity {
         }
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        mobile.setText("9042835190");
+        mobile.setText("9025731119");
         password.setText("password");
     }
 

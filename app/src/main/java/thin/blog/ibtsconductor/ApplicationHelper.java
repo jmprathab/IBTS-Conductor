@@ -3,7 +3,6 @@ package thin.blog.ibtsconductor;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.View;
 
 import java.security.MessageDigest;

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.dlazaro66.qrcodereaderview.QRCodeReaderView;
 
@@ -26,6 +25,9 @@ public class QRReader extends AppCompatActivity implements QRCodeReaderView.OnQR
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         qrCodeReaderView = (QRCodeReaderView) findViewById(R.id.qrdecoderview);
         qrCodeReaderView.setOnQRCodeReadListener(this);
+        qrCodeReaderView.setBackCamera();
+        qrCodeReaderView.setAutofocusInterval(2000);
+
     }
 
     @Override
@@ -36,25 +38,17 @@ public class QRReader extends AppCompatActivity implements QRCodeReaderView.OnQR
         finish();
     }
 
-    @Override
-    public void cameraNotFound() {
-        Toast.makeText(this, "Camera Not Found", Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void QRCodeNotFoundOnCamImage() {
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        qrCodeReaderView.getCameraManager().startPreview();
+        qrCodeReaderView.startCamera();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        qrCodeReaderView.getCameraManager().stopPreview();
+        qrCodeReaderView.stopCamera();
     }
 
     @Override

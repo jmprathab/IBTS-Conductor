@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnItemSelected;
 import datasets.Travel;
@@ -49,11 +49,11 @@ import static thin.blog.ibtsconductor.ApplicationHelper.writeToSharedPreferences
  * Main Fragment which takes care of Entering Details for User Travel
  */
 public class Scan extends Fragment {
-    @Bind(R.id.spinner_bus)
+    @BindView(R.id.spinner_bus)
     AppCompatSpinner busSpinner;
-    @Bind(R.id.spinner_stop)
+    @BindView(R.id.spinner_stop)
     AppCompatSpinner stopSpinner;
-    @Bind(R.id.number_of_passengers)
+    @BindView(R.id.number_of_passengers)
     EditText numberOfPassengers;
     boolean busSelected, stopSelected;
     List<String> busArrayList = new ArrayList<>();
